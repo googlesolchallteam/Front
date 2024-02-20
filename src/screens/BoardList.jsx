@@ -59,17 +59,6 @@ const BoardList = () => {
             <Text>검색</Text>
           </Div>
           <Div4>
-            <Div2>
-              <Wrapper>
-                {/* <Div1>서울시 종로구 익선동</Div1> */}
-              </Wrapper>
-              {/* <IcroundArrowBackIos>
-                <VectorIcon alt="" src="/vector.svg" />
-              </IcroundArrowBackIos> */}
-            </Div2>
-            <Div3>
-              {/* <Text1>지역</Text1> */}
-            </Div3>
           </Div4>
         </Div5>
         <Div6 />

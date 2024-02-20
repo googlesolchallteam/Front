@@ -25,12 +25,17 @@ import {
     Div13,
     Div12,
     Div15,
-    Div14
+    Div14,
+    LocateDiv,
+    EmailDiv,
+    Emaildiv,
+    EmailInput
 } from '../assets/BoardWriteCss/BoardWriteCss';
 import PriceFormat from '../components/BoardWrite/PriceFormat';
 import ImageUpload from '../components/BoardWrite/ImageUpload';
 import AWS from 'aws-sdk';
 import { B } from '../assets/BoardListCss/BoardlistCss';
+import BoardWriteMap from '../Map/BoardWriteMap';
 
 const BoardUpdate = () => {
     const navigate = useNavigate();
@@ -39,6 +44,8 @@ const BoardUpdate = () => {
     const [serverId, setId] = useState(-1);
     const [price, setPrice] = useState(0);
     const [postImg, setPostImg] = useState([]);
+    const [position, setPosition] = useState({ lat: 37.5665, lng: 126.978 });
+    const [address, setAddress] = useState('');
     const [board, setBoard] = useState({
         severId: '-1',
         title: '',
@@ -49,7 +56,11 @@ const BoardUpdate = () => {
         place: '',
         currentTime: new Date(),
         postImg: '',
+        address: '',
+        chatUri: '',
     });
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // 로컬스토리지에서 유저 정보 가져오기
     useEffect(() => {
@@ -67,7 +78,7 @@ const BoardUpdate = () => {
         }
     }, []);
 
-    const { title, contents, place } = board;
+    const { title, contents, place, chatUri } = board;
 
     const onChange = (event) => {
         const { value, name } = event.target;
@@ -167,6 +178,15 @@ const BoardUpdate = () => {
                             <PriceFormat price={price} setPrice={setPrice} board={board} setBoard={setBoard} />
                         </Wrapper>
                     </Div3>
+                    <EmailDiv>
+                        <Text1>이메일</Text1>
+                    </EmailDiv>
+                    <Emaildiv>
+                        <Wrapper>
+                            <EmailInput placeholder="챗 url을 입력해주세요"
+                                type="text" name="chatUri" value={chatUri} onChange={onChange} />
+                        </Wrapper>
+                    </Emaildiv>
                 </Div9>
                 <Div13>
                     <Div12>
@@ -176,15 +196,16 @@ const BoardUpdate = () => {
                     <ContentTextarea placeholder="본문을 작성해주세요" type='text' name='contents' value={contents} onChange={onChange}
                     />
                 </Div13>
-                <Div9>
+                <LocateDiv>
                     <Div15>
                         <Text1>거래희망지역</Text1>
                     </Div15>
                     <Div14>
-                        <TitleInput placeholder="위치를 입력해주세요"
-                            type="text" name="place" value={place} onChange={onChange} />
+                        <TitleInput placeholder="원하시는 거래위치로 드래그해주세요"
+                            type="text" name="place" value={address} onChange={onChange} />
                     </Div14>
-                </Div9>
+                    <BoardWriteMap position={position} setPosition={setPosition} address={address} setAddress={setAddress} board={board} setBoard={setBoard} />
+                </LocateDiv>
                 <Div16>
                     <Registerbutton onClick={updateBoard}>
                         <B>수정하기</B>

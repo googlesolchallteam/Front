@@ -65,7 +65,7 @@ function BoardWriteMap({ position, setPosition, address, setAddress, board, setB
         <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={10}
+            zoom={13}
             options={{ restriction: { latLngBounds: seoulBounds, strictBounds: false } }}
             onClick={(e) => handlePositionChanged({ lat: e.latLng.lat(), lng: e.latLng.lng() })}
         >

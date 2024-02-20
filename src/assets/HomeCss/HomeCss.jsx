@@ -45,12 +45,12 @@ export const Icon = styled.img`
   overflow: hidden;
 `;
 export const Div = styled.div`
-  width: 716px;
+  width: 100%;
   position: relative;
   background-color: var(--color-white);
-  border: 1px solid var(--color-darkgray);
+  border: 2px solid black;
   box-sizing: border-box;
-  height: 439px;
+  height: 100%;
   overflow: hidden;
   flex-shrink: 0;
 `;
@@ -206,10 +206,12 @@ export const Div7 = styled.div`
 export const Div8 = styled.div`
   position: absolute;
   top: 72px;
-  left: calc(50% - 358px);
+  left: 0px;
+  width: 30%;
+  height: 750px;
   border-radius: none;
   background-color: var(--color-white);
-  border: 1px solid var(--color-darkgray);
+  border: none;
   overflow: hidden;
   display: flex;
   flex-direction: column;

@@ -45,7 +45,7 @@ function HomeMap() {
         <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={10}
+            zoom={12}
         >
             {markerData.map(({ price, position, postImg, title, contents, boardId }) => (
                 <Marker

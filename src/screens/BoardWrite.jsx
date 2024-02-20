@@ -1,7 +1,7 @@
 import React from 'react';
 import GenderDropdown from "../components/BoardWrite/GenderDropdown";
 import ClothingDropdown from "../components/BoardWrite/ClothingDropdown";
-import { Div, Div1, Div12, Div14, Div15, Div16, Div17, Div3, Div4, Div6, Div7, Div8, Div9, DivRoot, Text1, Wrapper, Text, B, Div13, TitleInput, ContentTextarea, Cancelbutton, Registerbutton, ModalTolocation, ModalBackground, ModalContainer, ModalContent, LocateDiv } from "../assets/BoardWriteCss/BoardWriteCss";
+import { Div, Div1, Div12, Div14, Div15, Div16, Div17, Div3, Div4, Div6, Div7, Div8, Div9, DivRoot, Text1, Wrapper, Text, B, Div13, TitleInput, ContentTextarea, Cancelbutton, Registerbutton, ModalTolocation, ModalBackground, ModalContainer, ModalContent, LocateDiv, EmailDiv, Emaildiv, EmailInput } from "../assets/BoardWriteCss/BoardWriteCss";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PriceFormat from "../components/BoardWrite/PriceFormat";
@@ -29,6 +29,7 @@ const BoardWrite = () => {
     currentTime: new Date(),
     postImg: '',
     position: '',
+    chatUri: '',
   });
   const [isModalOpen, setIsModalOpen] = useState(false); // State to control the modal visibility
 
@@ -48,7 +49,7 @@ const BoardWrite = () => {
   }, []);
 
   // 비구조화 할당
-  const { title, contents, place } = board;
+  const { title, contents, place, chatUri } = board;
 
   // 타이틀, 본문 보드에 반영
   const onChange = (event) => {
@@ -62,7 +63,7 @@ const BoardWrite = () => {
   // 수정된 saveBoard 함수
   const saveBoard = async () => {
     // Check if any required fields are empty
-    if (postImg.length === 0 || title.trim() === '' || contents.trim() === '' || board.gender.trim() === '성별' || board.clothCategory.trim() === '의류 카테고리' || price === 0 || address.trim() === '') {
+    if (postImg.length === 0 || title.trim() === '' || contents.trim() === '' || board.gender.trim() === '성별' || board.clothCategory.trim() === '의류 카테고리' || price === 0 || address.trim() === '' || chatUri.trim() === '') {
       // Modified board.gender and board.clothCategory, added price and place check
       let errorMessage = '다음 요건을 충족해주세요:';
       if (postImg.length === 0) errorMessage += '\n- 이미지 최소 1장 이상 등록해주세요.';
@@ -72,6 +73,7 @@ const BoardWrite = () => {
       if (board.clothCategory.trim() === '의류 카테고리') errorMessage += '\n- 의류 카테고리 선택해주세요.';
       if (price === 0) errorMessage += '\n- 가격을 입력해주세요.';
       if (address.trim() === '') errorMessage += '\n- 거래 희망 지역을 마커로 설정해주세요.';
+      if (chatUri.trim() === '') errorMessage += '\n- 챗url을 입력해주세요.';
       alert(errorMessage);
       return;
     }
@@ -168,10 +170,18 @@ const BoardWrite = () => {
           </Div8>
           <Div3>
             <Wrapper>
-              {/* 가격 입력부분 */}
               <PriceFormat price={price} setPrice={setPrice} board={board} setBoard={setBoard} />
             </Wrapper>
           </Div3>
+          <EmailDiv>
+            <Text1>이메일</Text1>
+          </EmailDiv>
+          <Emaildiv>
+            <Wrapper>
+              <EmailInput placeholder="챗 url을 입력해주세요"
+                type="text" name="chatUri" value={chatUri} onChange={onChange} />
+            </Wrapper>
+          </Emaildiv>
         </Div9>
         <Div13>
           <Div12>

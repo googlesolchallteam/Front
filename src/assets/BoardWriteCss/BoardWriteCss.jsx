@@ -17,7 +17,7 @@ export const ContentTextarea = styled.textarea`
   left: calc(50% - 344px);
   border-radius: var(--br-5xs);
   background-color: var(--color-whitesmoke-100);
-  border: 1px solid var(--color-whitesmoke-200);
+  border:1px solid black;
   box-sizing: border-box;
   width: 678px;
   height: 230px;
@@ -558,4 +558,37 @@ export const ModalBackground = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+`;
+
+export const EmailDiv = styled.div`
+  position: absolute;
+  top: 10px;
+  left: 300px;
+  width: 56px;
+  height: 34px;
+  font-size: var(--font-size-xl);
+  color: rgba(0, 0, 0, 0.9);
+`;
+
+export const Emaildiv = styled.div`
+  position: absolute;
+  top: 52px;
+  left: 300px;
+  border-radius: none;
+  background-color: white;
+  border:none;
+  box-sizing: border-box;
+  width: 538px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: none;
+  z-index: 1;
+`;
+
+export const EmailInput = styled.input`
+  position: absolute;
+  width: 300px;
+  height: 30px;
 `;

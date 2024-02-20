@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const MapWrap = styled.div`
   position: absolute;
-  top: 515px;
-  left: 0px;
-  height: 700px;
+  top: 72px;
+  left: 30%;
+  height: 750px;
   width: 100%;
+  border: 2px solid black;
   border-radius: none;
   background-color: white;
   border: none;
