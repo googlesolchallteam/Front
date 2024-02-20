@@ -174,7 +174,7 @@ const BoardWrite = () => {
             </Wrapper>
           </Div3>
           <EmailDiv>
-            <Text1>이메일</Text1>
+            <Text1>챗 url</Text1>
           </EmailDiv>
           <Emaildiv>
             <Wrapper>

@@ -41,6 +41,7 @@ const BoardDetail = () => {
           gender={board.gender}
           place={board.place}
           address={board.address}
+          chatUri={board.chatUri}
         />
       )}
       {error && <div>Error: {error.message}</div>}

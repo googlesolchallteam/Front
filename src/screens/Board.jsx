@@ -45,7 +45,7 @@ const Parent = styled.div`
 const B = styled.b`
   position: relative;
 `;
-const Container = styled.div`
+const Container = styled.button`
   position: absolute;
   top: calc(50% - 23px);
   right: 18px;
@@ -62,6 +62,11 @@ const Container = styled.div`
   text-align: center;
   font-size: 17px;
   color: var(--color-white);
+   &:hover {
+    background: cornflowerblue;
+    color: white;
+    transition: 0.5s;
+   }
 `;
 const Div1 = styled.div`
   width: 715px;
@@ -352,7 +357,7 @@ const DivRoot = styled.div`
   font-family: var(--font-roboto);
 `;
 
-const Board = ({ postImg, profileImage, nickname, title, contents, clothCategory, gender, place, address }) => {
+const Board = ({ postImg, profileImage, nickname, title, contents, clothCategory, gender, place, address, chatUri }) => {
   return (
     <>
       <Div16>
@@ -369,7 +374,7 @@ const Board = ({ postImg, profileImage, nickname, title, contents, clothCategory
             </Wrapper>
           </Parent>
           <Container>
-            <B>채팅하기</B>
+            <B><Link to={chatUri}>채팅하기</Link></B>
           </Container>
         </Div1>
         <Div7>

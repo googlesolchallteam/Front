@@ -10,12 +10,12 @@ const NavBar = () => {
   const { isLoggedIn, handleLoginSuccess, handleLogout } = useAuth();
   const navigate = useNavigate();
   const navigateToBoardWrite = () => {
-    // if (isLoggedIn) {
-    //   navigate("/write");
-    // } else {
-    //   alert("빌려주기를 하려면 로그인이 필요합니다.");
-    //   navigate('/login');
-    // }
+    if (isLoggedIn) {
+      navigate("/write");
+    } else {
+      alert("빌려주기를 하려면 로그인이 필요합니다.");
+      navigate('/login');
+    }
     navigate('/write');
   };
 
