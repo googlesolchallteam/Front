@@ -33,7 +33,7 @@ const NavBar = () => {
     <NavBarContainer>
       <HomeLogo alt="" src={OurLogo} onClick={() => navigate("/")} />
       <ToBoardListButton onClick={() => navigate("/board")}>Search</ToBoardListButton>
-      <ToBoardWrite onClick={navigateToBoardWrite}>Rental</ToBoardWrite>
+      <ToBoardWrite onClick={navigateToBoardWrite}>Lending</ToBoardWrite>
       <MyPageButton onClick={() => navigate("/profile")}>MyPage</MyPageButton>
       <LoginButton onClick={handleButtonClick}>
         {isLoggedIn ? 'Logout' : 'Login'}
