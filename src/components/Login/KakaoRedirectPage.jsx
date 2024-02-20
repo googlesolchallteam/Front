@@ -22,7 +22,7 @@ const KakaoRedirectPage = () => {
         try {
             const response = await axios.get(`http://localhost:8080/oauth/login/kakao?code=${code}`);
             const data = response.data;
-            alert("로그인 성공: ");
+            alert("로그인 성공");
             localStorage.setItem('memberdata', JSON.stringify(data));
             const memberData = localStorage.getItem('memberdata');
             if (memberData) {
@@ -39,7 +39,6 @@ const KakaoRedirectPage = () => {
         const searchParams = new URLSearchParams(location.search);
         const code = searchParams.get('code');
         if (code) {
-            alert("CODE = " + code);
             handleOAuthKakao(code);
         }
     }, [location]);
