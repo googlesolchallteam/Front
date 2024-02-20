@@ -48,8 +48,7 @@ function App() {
         <DivRoot>
           {globalComponent}
           <NavBar />
-          <Board />
-          {/* <Routes>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<MyPage />} />
             <Route path="/board" element={<BoardList />} />
@@ -60,7 +59,7 @@ function App() {
             <Route path="/oauth/redirected/kakao" element={<KakaoRedirectPage />} />
             <Route path='/chat' element={<Chating />} />
             <Route path='/delete' element={<BoardDelete />} />
-          </Routes> */}
+          </Routes>
         </DivRoot>
       </Router>
     </AuthProvider>
