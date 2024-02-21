@@ -61,63 +61,46 @@ The Cheolsu Closet Project avoids the production of clothing due to indiscrimina
 
 - Home screan
 
-<img src="src/img/home.png" width="550" /> &nbsp;&nbsp;&nbsp; 
+<img src="src/img/home.png" width="550" /> &nbsp;&nbsp;&nbsp;
 <img src="src/img/home2.png" width="500" />
 
 In the home screen, the products posted by users along with the intentions of our project are plotted on the map. You can also click to see more.
 
-- write screen
+- Detail screen
 
+<img src="src/img/home.png" width="550" />
 
+Those who want to rent a product from the page where they entered the detailed view can get more information about the product and can directly trade the product by accessing the Google Chat link posted by the lender by entering the chat button.
 
-On the map screen, you can get information about the location of reports. This screen displays report markers based on your signed-up location. But, you can also scroll, zoom in/out on the screen or just search the location to check markers based on other locations. If you click the floating button, your map screen is moved to your current location. You can see the title and explanation of the report by clicking the marker. If you tap the marker's information window, you can move to the report detail screen.
+- Login screen
 
-- Report writing screen
+<img src="src/img/home.png" width="550" />
 
-<img src="/assets/README/Screenshot_1646725133.png" width="200" height="400" align="left"/>  
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+If you are a person who wants to rent a product, you should log in through the Kakao Talk social login.
 
-The report writing screen appears when you click the rainbow-colored middle button on the bottom navigation bar. You can put up to five pictures. You have to choose one category and write a title and explanation of your report. 
+- lending screen
 
-- Report list screen
+<img src="src/img/home.png" width="550" /> &nbsp;&nbsp;&nbsp;>
 
-<img src="/assets/README/Screenshot_1646725155.png" width="200" height="400"/> &nbsp;&nbsp;&nbsp; <img src="/assets/README/Screenshot_1646725161.png" width="200" height="400"/> &nbsp;&nbsp;&nbsp; <img src="/assets/README/Screenshot_1646725166.png" width="200" height="400"/>
+When you press the Lending button on the Lending Home screen, you'll see a screen where you can register the product you want to trade with. You can enter the image, title, gender, clothing category, content, and more of the product here, and enter Google Chat url to chat with the person who wants to borrow the product later. You can also register your desired trading location by moving the marker on the map.
 
-Reports within your 10km radius are displayed in two tabs on the report list screen. The "reports" tab displays reports that haven't been solved yet. The "solved" tab displays solved reports. You can select categories that you want to display. To create a report, click the pencil icon. Also, you can search for a specific report by clicking the search icon.
+- Search screen
 
-- Report detail screen
+<img src="src/img/home.png" width="550" /> &nbsp;&nbsp;&nbsp;>
+<img src="src/img/home.png" width="550" />
 
-<img src="/assets/README/Screenshot_1646725304.png" width="200" height="400"/> &nbsp;&nbsp;&nbsp; <img src="/assets/README/Screenshot_1646725317.png" width="200" height="400"/> &nbsp;&nbsp;&nbsp; <img src="/assets/README/Screenshot_1646725309.png" width="200" height="400"/>
+Those who want to rent a product can also search for the product by clicking the Search button, as well as the map on the website, and specifying the title and clothing category.
 
-The report detail screen provides a comment function. When you click the top right button, you can see the report’s exact location on the map page.
+- MyPage
 
-- My page screen
+<img src="src/img/home.png" width="550" /> &nbsp;&nbsp;&nbsp;>
 
-<img src="/assets/README/Screenshot_1646725217.png" width="200" height="400"/> &nbsp;&nbsp;&nbsp; <img src="/assets/README/Screenshot_1646725223.png" width="200" height="400"/> &nbsp;&nbsp;&nbsp; <img src="/assets/README/Screenshot_1646725837.png" width="200" height="400"/>
-
-You can check personal information on my page screen. If you want to see the list of your reports, click the my report tab. If you want to change your information, click the settings tab.  You can change your nickname and update your location on this tab.
-
+If you are logged in, you can access My Page. On My Page, you can see your KakaoTalk profile picture and name, and you can update or delete the products you posted.
 
 
 #  Stack
 
-- Java version 
+- Java version
   - Java : `17`
   - Spring : `3.2.2`
 - React : `18.2.0`
@@ -126,7 +109,7 @@ You can check personal information on my page screen. If you want to see the lis
 
 # 🧑‍🔧
 
-- Won-young Lee : https://github.com/210-reverof
-- Ha-jeong Lee : https://github.com/SS-hj/
-- Jun-jang Jo : https://github.com/junjange
-- Tae-gyu Han : https://github.com/TaegyuHan
+- TaeDong Han : https://github.com/210-reverof
+- JunHuck Oh : https://github.com/SS-hj/
+- HyeongJin Boo : https://github.com/junjange
+- Minsuk Kim : https://github.com/TaegyuHan
