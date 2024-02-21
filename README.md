@@ -74,26 +74,27 @@ Those who want to rent a product from the page where they entered the detailed v
 
 - Login screen
 
-<img src="src/img/home.png" width="550" />
+<img src="src/img/Login.png" width="550" />
 
 If you are a person who wants to rent a product, you should log in through the Kakao Talk social login.
 
 - lending screen
 
-<img src="src/img/home.png" width="550" /> &nbsp;&nbsp;&nbsp;>
+<img src="src/img/BoardWrite.png" width="550" /> &nbsp;&nbsp;&nbsp;>
+<img src="src/img/BoardWrite2.png" width="550" />
 
 When you press the Lending button on the Lending Home screen, you'll see a screen where you can register the product you want to trade with. You can enter the image, title, gender, clothing category, content, and more of the product here, and enter Google Chat url to chat with the person who wants to borrow the product later. You can also register your desired trading location by moving the marker on the map.
 
 - Search screen
 
-<img src="src/img/home.png" width="550" /> &nbsp;&nbsp;&nbsp;>
-<img src="src/img/home.png" width="550" />
+<img src="src/img/BoardSearch.png" width="550" /> &nbsp;&nbsp;&nbsp;>
+<img src="src/img/BoardSearch2.png" width="550" />
 
 Those who want to rent a product can also search for the product by clicking the Search button, as well as the map on the website, and specifying the title and clothing category.
 
 - MyPage
 
-<img src="src/img/home.png" width="550" /> &nbsp;&nbsp;&nbsp;>
+<img src="src/img/Mypage.png" width="550" /> &nbsp;&nbsp;&nbsp;>
 
 If you are logged in, you can access My Page. On My Page, you can see your KakaoTalk profile picture and name, and you can update or delete the products you posted.
 
